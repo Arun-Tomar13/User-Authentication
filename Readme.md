@@ -253,49 +253,6 @@ account-manager/
 │
 ├── .gitignore
 └── README.md
-```
-```
-
-***
-
-## **OR Use This Table Format (Always Perfect Alignment):**
-
-````markdown
-## 📁 Project Structure
-
-### Backend
-
-| Path | Description |
-|------|-------------|
-| `backend/controllers/auth.controller.js` | All authentication logic |
-| `backend/middleware/auth.middleware.js` | JWT verification |
-| `backend/models/User.model.js` | User schema |
-| `backend/models/OTP.model.js` | OTP schema |
-| `backend/routes/auth.route.js` | API routes |
-| `backend/utils/sendEmail.util.js` | Email service |
-| `backend/config/db.js` | MongoDB connection |
-| `backend/server.js` | Entry point |
-
-### Frontend
-
-| Path | Description |
-|------|-------------|
-| `frontend/src/components/Login.jsx` | Login page |
-| `frontend/src/components/Register.jsx` | Registration page |
-| `frontend/src/components/VerifyOTP.jsx` | OTP verification |
-| `frontend/src/components/ForgotPassword.jsx` | Password reset |
-| `frontend/src/components/ChangePassword.jsx` | Change password |
-| `frontend/src/components/Dashboard.jsx` | User dashboard |
-| `frontend/src/components/Navbar.jsx` | Navigation |
-| `frontend/src/contexts/AuthContext.jsx` | Auth state |
-| `frontend/src/api/auth.js` | API calls |
-| `frontend/src/App.jsx` | Main router |
-| `frontend/src/main.jsx` | Entry point |
-| `frontend/src/index.css` | Global styles |
-```
-
-***
-
 
 ---
 
