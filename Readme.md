@@ -20,32 +20,37 @@
 
 ### Authentication Flow
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="./preview/login.png" alt="Login" width="400"/>
-      <br />
-      <strong>Login Page</strong>
-    </td>
-    <td align="center">
-      <img src="./preview/register.png" alt="Register" width="400"/>
-      <br />
-      <strong>Register Page</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <img src="./preview/forgot-password-1.png" alt="Forgot Password Step 1" width="400"/>
-      <br />
-      <strong>Forgot Password - Step 1</strong>
-    </td>
-    <td align="center">
-      <img src="./preview/forgot-password-2.png" alt="Forgot Password Step 2" width="400"/>
-      <br />
-      <strong>Forgot Password - Step 2</strong>
-    </td>
-  </tr>
-</table>
+### Register
+
+<div align="center">
+  <img src="./preview/register.png" alt="Register" width="800"/>
+  <br />
+  <strong>Register Page</strong>
+</div>
+
+### Login
+
+<div align="center">
+  <img src="./preview/login.png" alt="Login" width="800"/>
+  <br />
+  <strong>Login Page</strong>
+</div>
+### Dashboard
+
+
+### Forget Password
+
+<div align="center">
+  <img src="./preview/forgot-password-1.png" alt="Forgot Password Step 1" width="500"/>
+  <br />
+  <strong>Forgot Password - Step 1</strong>
+</div>
+
+<div align="center">
+  <img src="./preview/forgot-password-2.png" alt="Forgot Password Step 2" width="500"/>
+  <br />
+  <strong>Forgot Password - Step 2</strong>
+</div>
 
 ### Dashboard
 
@@ -254,9 +259,7 @@ account-manager/
 ├── .gitignore
 └── README.md
 
----
-
-## 🔌 API Documentation
+```
 
 ### Base URL
 http://localhost:5000/api/auth
