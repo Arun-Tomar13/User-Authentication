@@ -203,54 +203,99 @@ text
 3. Copy the **16-digit password**
 4. Add to `.env` as `EMAIL_PASS`
 
----## 📁 Project Structure
+## 📁 Project Structure
 
+```
 account-manager/
+│
 ├── backend/
-│ ├── controllers/
-│ │ └── auth.controller.js # All auth logic
-│ ├── middleware/
-│ │ └── auth.middleware.js # JWT verification
-│ ├── models/
-│ │ ├── User.model.js # User schema
-│ │ └── OTP.model.js # OTP schema
-│ ├── routes/
-│ │ └── auth.route.js # API routes
-│ ├── utils/
-│ │ └── sendEmail.util.js # Email service
-│ ├── config/
-│ │ └── db.js # MongoDB connection
-│ ├── server.js # Entry point
-│ └── .env # Environment variables
+│   ├── controllers/
+│   │   └── auth.controller.js
+│   ├── middleware/
+│   │   └── auth.middleware.js
+│   ├── models/
+│   │   ├── User.model.js
+│   │   └── OTP.model.js
+│   ├── routes/
+│   │   └── auth.route.js
+│   ├── utils/
+│   │   └── sendEmail.util.js
+│   ├── config/
+│   │   └── db.js
+│   ├── server.js
+│   └── package.json
 │
 ├── frontend/
-│ ├── src/
-│ │ ├── components/
-│ │ │ ├── Login.jsx
-│ │ │ ├── Register.jsx
-│ │ │ ├── VerifyOTP.jsx
-│ │ │ ├── ForgotPassword.jsx
-│ │ │ ├── ChangePassword.jsx
-│ │ │ ├── Dashboard.jsx
-│ │ │ └── Navbar.jsx
-│ │ ├── contexts/
-│ │ │ └── AuthContext.jsx # Auth state management
-│ │ ├── api/
-│ │ │ └── auth.js # API calls
-│ │ ├── App.jsx # Router setup
-│ │ ├── main.jsx # Entry point
-│ │ └── index.css # Global styles
-│ └── package.json
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Login.jsx
+│   │   │   ├── Register.jsx
+│   │   │   ├── VerifyOTP.jsx
+│   │   │   ├── ForgotPassword.jsx
+│   │   │   ├── ChangePassword.jsx
+│   │   │   ├── Dashboard.jsx
+│   │   │   └── Navbar.jsx
+│   │   ├── contexts/
+│   │   │   └── AuthContext.jsx
+│   │   ├── api/
+│   │   │   └── auth.js
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   └── package.json
 │
-├── preview/ # Screenshots & demo video
-│ ├── login.png
-│ ├── register.png
-│ ├── forgot-password-1.png
-│ ├── forgot-password-2.png
-│ ├── dashboard.png
-│ 
+├── preview/
+│   ├── login.png
+│   ├── register.png
+│   ├── forgot-password-1.png
+│   ├── forgot-password-2.png
+│   └── dashboard.png
 │
+├── .gitignore
 └── README.md
+```
+```
+
+***
+
+## **OR Use This Table Format (Always Perfect Alignment):**
+
+````markdown
+## 📁 Project Structure
+
+### Backend
+
+| Path | Description |
+|------|-------------|
+| `backend/controllers/auth.controller.js` | All authentication logic |
+| `backend/middleware/auth.middleware.js` | JWT verification |
+| `backend/models/User.model.js` | User schema |
+| `backend/models/OTP.model.js` | OTP schema |
+| `backend/routes/auth.route.js` | API routes |
+| `backend/utils/sendEmail.util.js` | Email service |
+| `backend/config/db.js` | MongoDB connection |
+| `backend/server.js` | Entry point |
+
+### Frontend
+
+| Path | Description |
+|------|-------------|
+| `frontend/src/components/Login.jsx` | Login page |
+| `frontend/src/components/Register.jsx` | Registration page |
+| `frontend/src/components/VerifyOTP.jsx` | OTP verification |
+| `frontend/src/components/ForgotPassword.jsx` | Password reset |
+| `frontend/src/components/ChangePassword.jsx` | Change password |
+| `frontend/src/components/Dashboard.jsx` | User dashboard |
+| `frontend/src/components/Navbar.jsx` | Navigation |
+| `frontend/src/contexts/AuthContext.jsx` | Auth state |
+| `frontend/src/api/auth.js` | API calls |
+| `frontend/src/App.jsx` | Main router |
+| `frontend/src/main.jsx` | Entry point |
+| `frontend/src/index.css` | Global styles |
+```
+
+***
+
 
 ---
 
