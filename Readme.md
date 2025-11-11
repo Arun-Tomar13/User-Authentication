@@ -35,8 +35,6 @@
   <br />
   <strong>Login Page</strong>
 </div>
-### Dashboard
-
 
 ### Forget Password
 
@@ -59,9 +57,6 @@
   <br />
   <strong>User Dashboard with Profile Management</strong>
 </div>
-
-
-> **Note:** If video doesn't play, [click here to download](./preview/demo.mp4)
 
 ---
 
@@ -105,11 +100,10 @@
 🌐 **[Coming Soon]**
 
 ### Test Credentials
-
+```
 Email: demo@example.com
 Password: demo123
-
-text
+```
 
 ---
 
@@ -145,50 +139,50 @@ text
 - Gmail account (for email service)
 
 ### 1. Clone the Repository
-git clone https://github.com/yourusername/account-manager.git
-cd account-manager
-
-text
+```bash
+git clone https://github.com/Arun-Tomar13/User-Authentication.git
+cd User-Authentication
+```
 
 ### 2. Backend Setup
+```bash
 cd backend
 npm install
-
-text
+```
 
 Create `.env` file:
+```env
 PORT=5000
 MONGO_URI=mongodb://localhost:27017/account-manager
+# Or use MongoDB Atlas:
+# MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/account-manager
 
-Or use MongoDB Atlas:
-MONGO_URI=mongodb+srv://username:password@cluster.mongodb.net/account-manager
 JWT_SECRET=your_super_secret_jwt_key_here_minimum_32_characters
 
-Gmail Configuration
+# Gmail Configuration
 EMAIL_USER=your-email@gmail.com
 EMAIL_PASS=your-16-digit-app-password
-
-text
+```
 
 ### 3. Frontend Setup
+```bash
 cd ../frontend
 npm install
-
-text
+```
 
 ### 4. Run the Application
 
 **Terminal 1 - Backend:**
+```bash
 cd backend
 npm run dev
-
-text
+```
 
 **Terminal 2 - Frontend:**
+```bash
 cd frontend
 npm run dev
-
-text
+```
 
 **Access the app:**
 - Frontend: `http://localhost:5173`
@@ -207,6 +201,8 @@ text
 2. Select **Mail** and your device
 3. Copy the **16-digit password**
 4. Add to `.env` as `EMAIL_PASS`
+
+---
 
 ## 📁 Project Structure
 
@@ -258,148 +254,174 @@ account-manager/
 │
 ├── .gitignore
 └── README.md
-
 ```
 
+---
+
+## 🔌 API Documentation
+
 ### Base URL
+```
 http://localhost:5000/api/auth
+```
 
 ### Endpoints
 
 #### 1. Register User
+```http
 POST /register
 Content-Type: application/json
 
 {
-"name": "John Doe",
-"email": "john@example.com",
-"password": "password123"
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "password123"
 }
+```
 
 **Response:**
+```json
 {
-"message": "Registration successful! Please check your email for OTP.",
-"email": "john@example.com"
+  "message": "Registration successful! Please check your email for OTP.",
+  "email": "john@example.com"
 }
+```
 
 ---
 
 #### 2. Verify OTP
+```http
 POST /verify-otp
 Content-Type: application/json
 
 {
-"email": "john@example.com",
-"otp": "123456"
+  "email": "john@example.com",
+  "otp": "123456"
 }
-
+```
 
 **Response:**
+```json
 {
-"message": "Email verified successfully!",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-"user": {
-"id": "673...",
-"name": "John Doe",
-"email": "john@example.com",
-"isVerified": true
+  "message": "Email verified successfully!",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": {
+    "id": "673...",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "isVerified": true
+  }
 }
-}
+```
 
 ---
 
 #### 3. Login
+```http
 POST /login
 Content-Type: application/json
 
 {
-"email": "john@example.com",
-"password": "password123"
+  "email": "john@example.com",
+  "password": "password123"
 }
+```
 
 **Response:**
+```json
 {
-"message": "Login successful!",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
-"user": { ... }
+  "message": "Login successful!",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "user": { ... }
 }
-
-text
+```
 
 ---
 
 #### 4. Get Profile (Protected)
+```http
 GET /profile
 Authorization: Bearer <token>
+```
 
 **Response:**
+```json
 {
-"user": {
-"id": "673...",
-"name": "John Doe",
-"email": "john@example.com",
-"phone": "9876543210",
-"address": "123 Main St",
-"isVerified": true,
-"createdAt": "2024-11-11T12:00:00.000Z"
+  "user": {
+    "id": "673...",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "9876543210",
+    "address": "123 Main St",
+    "isVerified": true,
+    "createdAt": "2024-11-11T12:00:00.000Z"
+  }
 }
-}
+```
 
 ---
 
 #### 5. Update Profile (Protected)
+```http
 PUT /profile
 Authorization: Bearer <token>
 Content-Type: application/json
 
 {
-"name": "John Updated",
-"phone": "9876543210",
-"address": "456 New St"
+  "name": "John Updated",
+  "phone": "9876543210",
+  "address": "456 New St"
 }
+```
 
 ---
 
 #### 6. Forgot Password
+```http
 POST /forgot-password
 Content-Type: application/json
 
 {
-"email": "john@example.com"
+  "email": "john@example.com"
 }
+```
 
 ---
 
 #### 7. Reset Password
+```http
 POST /reset-password
 Content-Type: application/json
 
 {
-"email": "john@example.com",
-"otp": "123456",
-"newPassword": "newpass123"
+  "email": "john@example.com",
+  "otp": "123456",
+  "newPassword": "newpass123"
 }
+```
 
 ---
 
 #### 8. Change Password - Send OTP (Protected)
+```http
 POST /change-password-otp
 Authorization: Bearer <token>
-
+```
 
 ---
 
 #### 9. Change Password (Protected)
+```http
 POST /change-password
 Authorization: Bearer <token>
 Content-Type: application/json
 
 {
-"currentPassword": "oldpass123",
-"newPassword": "newpass123",
-"otp": "123456"
+  "currentPassword": "oldpass123",
+  "newPassword": "newpass123",
+  "otp": "123456"
 }
-
+```
 
 ---
 
@@ -482,10 +504,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+**Arun Tomar**
+- GitHub: [@Arun-Tomar13](https://github.com/Arun-Tomar13)
+- LinkedIn: [Arun Tomar](https://linkedin.com/in/yourprofile)
 
 ---
 
@@ -506,5 +527,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Made with ❤️ and ☕
 
 </div>
-
-
