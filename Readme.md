@@ -22,7 +22,7 @@
 
 <div align="center">
 
-https://github.com/Arun-Tomar13/User-Authentication/assets/YOUR_USER_ID/VIDEO_ID.mp4
+https://github.com/Arun-Tomar13/User-Authentication/preview/demo.mp4
 
 <strong>Full Application Demo (5 minutes)</strong>
 
