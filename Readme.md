@@ -21,17 +21,13 @@
 ### 🎥 Video Demo
 
 <div align="center">
-  <a href="./preview/demo.mp4">
-    <img src="https://img.shields.io/badge/📹_Download_Demo_Video-80_MB-4285F4?style=for-the-badge&logo=googledrive&logoColor=white" alt="Download Demo"/>
-  </a>
-  <br />
-  <br />
-  <strong>Full Application Walkthrough (5 minutes)</strong>
-  <br />
-  <em>Click the badge above to download and watch the complete demo</em>
+
+https://github.com/Arun-Tomar13/User-Authentication/assets/YOUR_USER_ID/VIDEO_ID.mp4
+
+<strong>Full Application Demo (5 minutes)</strong>
+
 </div>
 
----
 
 
 ### Authentication Flow
