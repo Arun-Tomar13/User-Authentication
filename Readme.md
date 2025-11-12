@@ -20,10 +20,11 @@
 
 ### 🎥 Video Demo
 
+
+https://github.com/user-attachments/assets/c2a7feaf-6e12-488c-a1e2-6deebdcf70e8
+
+
 <div align="center">
-
-https://github.com/Arun-Tomar13/User-Authentication/preview/demo.mp4
-
 <strong>Full Application Demo (5 minutes)</strong>
 
 </div>
